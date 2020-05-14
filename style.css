@@ -1,0 +1,407 @@
+* {
+    box-sizing: border-box;
+
+  }
+
+ 
+  
+  @media only screen and (min-width: 600px) {
+    /* -------------For tablets: -------------*/
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+    }
+   
+  
+  @media only screen and (min-width: 768px) {
+    /* -------------For desktop:------------- */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    .flex-container {
+        display: flex;
+        flex-direction: row ;
+        height: 100%;  
+    }
+    .flex-item {
+        flex: 1 1 0;
+        flex-grow: 1;
+        width: 50vw;
+    }
+    body {
+        font-size: 100%;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+    
+    h2 {
+        font-size: 30px;
+    }
+
+  } 
+
+@media only screen and (max-width: 768px) {
+    /* -------------For mobile phones: -------------*/
+    [class*="col-"] {
+      width: 100%;
+    }
+    .flex-countainer-s { 
+        display: flex;
+        flex-direction: column;
+        height: 100%;  
+    }
+    .flex-container-footer-s {
+        display: flex;
+        flex-direction: row ;
+        height: 100%;  
+    }
+    .flex-item-s {
+        flex-grow: 1;
+        height: 50%;
+    }
+
+    body {
+        font-size: 80%;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+    
+    h2 {
+        font-size: 25px;
+    }
+
+  }
+
+html, body {
+    margin: 0; 
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*------------- Nav and menu bar  -------------*/
+.nav {
+    background-color: none;
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    text-align: right;
+}
+
+.menu-icon1, .menu-icon2{
+    width: 20px;
+    height: 20px;
+    margin-right: 4%; 
+    margin-top: 5%; 
+}
+
+.home {
+    height: 100%;
+    background-image: url("sushi.jpg");
+    background-size: cover;
+
+}
+
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 127, 80, 0.8);
+}
+
+.menu-list-wrapper{
+    text-align: center;
+    margin-top: 200px;
+}
+
+.sushi-icon {
+    width: 100px;
+}
+
+.menu-list{
+    font-size: 20px;;
+    list-style-type: none;
+    margin-right: 120px;
+    margin-left: 120px;
+    padding: 0;
+}
+
+li {
+  padding-bottom: 20px;
+  opacity: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    opacity: 0.6;
+    transition:0.3s;
+}
+
+a:hover {
+    color: black;
+    opacity: 0.9;
+}
+
+.closeBar{
+    animation-name: closemenubar;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+.hidden{
+    display: none;
+}
+
+
+.visible{
+    display: block;
+    animation-name: openmenubar;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes openmenubar {
+    0% {opacity: 0; right: -100%}
+    100% {opacity: 1; right: 0;}
+}
+
+@keyframes closemenubar {
+    0% {opacity: 1; right: 0;}
+    100% {opacity: 0; right: -1000px;}
+}
+
+
+.visible-item1 {
+    position: relative;
+    animation-name: listitem1;
+    animation-duration:0.5s;
+    animation-fill-mode: forwards;
+    /* animation-delay: 0.05s;  */
+}
+
+@keyframes listitem1 {
+    0% {opacity: 0; right: -1000px}
+    100% {opacity: 1; right: 0;} 
+}
+
+.visible-item2 {
+    position: relative;
+    animation-name: listitem2;
+    animation-duration:0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.01s;
+}
+
+@keyframes listitem2 {
+    0% {opacity: 0; right: -1000px}
+    100% {opacity: 1; right: 0;}  
+}
+
+.visible-item3 {
+    position: relative;
+    animation-name: listitem2;
+    animation-duration:0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.02s;
+}
+
+@keyframes listitem3 {
+    0% {opacity: 0; right: -1000px}
+    100% {opacity: 1; right: 0;}  
+}
+
+.visible-item4 {
+    position: relative;
+    animation-name: listitem2;
+    animation-duration:0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.03s;
+}
+
+
+@keyframes listitem4 {
+    0% {opacity: 0; right: -1000px}
+    100% {opacity: 1; right: 0;} 
+}
+
+/* -------------restaurant title, and first main page------------- */
+
+.first-page-container {
+    height: 100vh;
+}
+
+
+.color-background{
+    background-color: rgba(255, 127, 80, 0.6);  
+}
+
+.sushi-main-page {
+    text-align: center;
+    align-items: stretch; 
+}
+
+.title {
+    padding-top: 12em;
+    text-align: right;
+    padding-bottom: 90px;
+}
+
+.store-name {
+    padding-right: 15%;
+    margin: 0;
+}
+
+.store-quote {
+    text-align: right;
+    padding-right: 15%;
+    margin: 0;
+} 
+
+
+/* -------------Our approach------------- */
+.approach-explain {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    text-align: center;
+    padding-bottom: 5rem;
+}
+
+.approach-image {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+
+.fish-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.approach-subject{
+    height: 20%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+ 
+}
+
+/* -------------sushi helps and contact------------- */
+.fish-helps-explain{
+    text-align: center;
+    padding-bottom: 5rem;
+}
+
+.salmon-img{
+    width: 100%; 
+    object-fit: cover;
+}
+
+
+.fish-helps-subtitle {
+    height: 30%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+/*------------- our approach and sushi helps font size and buttons -------------*/
+.approach-title, .fish-help-title {
+    padding-top: 5rem;
+}
+
+.menu-button, .contact-button{
+    height: 55px;
+    width: 25%;
+    font-size: 15px;
+    background-color: rgb(255, 127, 80);
+    border-style: none;
+    padding: 10px;
+    transition:0.3s;
+    margin-top: 50px;
+}
+
+.menu-button:hover, .contact-button:hover{
+    background-color: rgba(255, 127, 80, 0.6);;
+}
+
+.contact-button {
+    
+}
+
+
+
+
+/* -------------footer------------- */
+footer {
+    font-size: 20px;
+}
+
+.copyright {
+    flex: 1 1 0;
+    padding-left: 5%;
+    padding-bottom: 70px;
+    padding-top: 70px;
+  
+   
+}
+
+.copyright p{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-size: 2.3vw;
+}
+
+.icon {
+    flex: 1 1 0;
+    text-align: right;
+    padding-right: 10%;
+    padding-top:70px;
+    padding-bottom: 70px;
+    
+}
+
+.fa-instagram, .fa-twitter{
+
+    width: 20px;
+    color: rgb(255, 127, 80);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 10px;
+}
+
+.fa-instagram:hover, .fa-twitter:hover{
+    color: rgb(255, 127, 80, 0.8);
+}
